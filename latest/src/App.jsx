@@ -1,12 +1,18 @@
 import React from "react";
 
 const App = () => {
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log('Form Submitted');
+  }
   return (
-    <div className="min-h-screen bg-black text-white flex items-start justify-center py-12">
+   <div className="min-h-screen bg-black text-white flex items-start justify-center py-12">
+      
       <div className="w-full max-w-5xl bg-transparent">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-8">
           <div className="w-full md:w-1/2">
-            <form className="w-full">
+            <form className="w-full" onSubmit= {(e) => 
+              submitHandler(e)}>
               <div className="flex flex-col gap-6">
                 <input
                   type="text"
